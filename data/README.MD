@@ -8,7 +8,7 @@ Quelle: Robert Koch Institut
     In der Datenquelle sind folgende Parameter enthalten:
         IdBundesland: Id des Bundeslands des Falles mit 1=Schleswig-Holstein bis 16=Thüringen
         Bundesland: Name des Bundeslanes
-        Landkreis ID: Id des Landkreises des Falles in der üblichen Kodierung 1001 bis 16077=LK Altenburger Land
+        Landkreis ID: Id des Landkreises **des Falles in der üblichen Kod**ierung 1001 bis 16077=LK Altenburger Land
         Landkreis: Name des Landkreises
         Altersgruppe: Altersgruppe des Falles aus den 6 Gruppe 0-4, 5-14, 15-34, 35-59, 60-79, 80+ sowie unbekannt
         Altersgruppe2: Altersgruppe des Falles aus 5-Jahresgruppen 0-4, 5-9, 10-14, ..., 75-79, 80+ sowie unbekannt
