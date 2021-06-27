@@ -18,14 +18,8 @@ from pyspark.mllib.evaluation import BinaryClassificationMetrics
 from pyspark.ml import Pipeline
 from pyspark.mllib.evaluation import MulticlassMetrics
 
-inputFile = translate_to_file_string("./data/Data_Preparation_Result.csv")
+inputFile = "hdfs:///data/Data_Preparation_Result.csv"
 
-def prettyPrint(dm, collArray) :
-    rows = dm.toArray().tolist()
-    dfDM = spark.createDataFrame(rows,collArray)
-    newDf = dfDM.toPandas()
-    from IPython.display import display, HTML
-    return HTML(newDf.to_html(index=False))
 
 
 # ## Create Spark Session
@@ -36,6 +30,7 @@ def prettyPrint(dm, collArray) :
 #create a SparkSession
 spark = (SparkSession
        .builder
+       .master("yarn")
        .appName("DataModelling")
        .getOrCreate())
 # create a DataFrame using an ifered Schema 
@@ -272,8 +267,6 @@ mcMetrics = MulticlassMetrics(predictionAndLabels)
 
 # In[26]:
 
-
-prettyPrint(mcMetrics.confusionMatrix(),["positiv", "negativ"])
 
 
 # In[27]:

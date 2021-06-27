@@ -21,3 +21,5 @@ def translate_to_local_file_path(filename,directory=''):
 
 def translate_to_file_string(filepath):
     return f"file:///{abspath(filepath)}"
+
+## Copy from https://github.com/sturc/ds_bd/blob/master/exercises/helpers/helper_functions.py
