@@ -8,15 +8,18 @@ Weitere Infos zum Datensatz finden sich auf der Seite des RKIs bzw. im Ordner Da
 ## Setup
 Als Erstes bitte Docker Desktop installieren.
 
+### GIT LFS
 Da es sich bei den Datensätzen um sehr große Dateien handelt, wird das Git Large File Storage-Plugin benötigt. Dieses ersetzt große Dateien durch einen Pointer und speichert die Dateien auf einem Remote-Server (wie Github.com). Das entsprechende Plugin kann von folgender URL heruntergeladen werden:
 
 https://git-lfs.github.com/
 
+### Klonen
 Das Repository kann mittels folgendem Befehl geklont werden.
 ``
 git clone https://github.com/hschaeufler/DataScienceApplication.git
 ``
 
+### Jupyter-Umgebung
 Um die Notebooks betreiben, bitte auch folgendes Repository klonen.
 ``
 https://github.com/sturc/jupyter_with_yarn.git
