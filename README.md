@@ -33,8 +33,15 @@ Danach kann über ``docker compose up`` (innerhalb des Ordners jupyter_with_yarn
 
 Um die Jypyter-Notebook-Umgebung zu starten, bitte die URL mit dem Access-Token, der Konsole entnehmen, oder folgende [Readme](https://github.com/sturc/jupyter_with_yarn) beachten.
 
+### Deployment ins Hadoop-Cluster
+Mit dem Notebook ```push_data_dir_to_hdfs.ipynb``` können die CSV-Files im HDFS des Hadoop-Cluster gespeichert werden.
+
+Mit folgendem Befehl kann dann das Random-Forest-Python-Script (05_Deployment_RF.py) in das Hadoop-Cluster deployed und als Job submitet werden.
+```
+spark-submit --master yarn --deploy-mode client --conf spark.network.timeout=121s --conf spark.executor.heartbeatInterval=120s --conf spark.yarn.maxAppAttempts=2 work/DataScienceApplication/05_Deployment_RF.py
+```
 ## License Information
-Aus dem GitHub-Repository https://github.com/sturc/ds_bd wurden nachfolgende Files und Ordner (inkl. Inhalt) übernommen. 
+Aus dem GitHub-Repository https://github.com/sturc/ds_bd wurden nachfolgende Files und Ordner (inkl. Inhalt) übernommen.
 ```
 \binder
 \hadoop-configs
