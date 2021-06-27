@@ -12,7 +12,7 @@ from pyspark.ml.evaluation import BinaryClassificationEvaluator
 from pyspark.ml.classification import RandomForestClassifier
 from helpers.helper_functions import translate_to_file_string
 from pyspark.ml.tuning import CrossValidator, ParamGridBuilder
-from pyspark.ml.evaluation import RegressionEvaluator
+from pyspark.ml.evaluation import RegresionEvaluator
 from pyspark.ml.feature import StringIndexer
 from pyspark.mllib.evaluation import BinaryClassificationMetrics
 from pyspark.ml import Pipeline
